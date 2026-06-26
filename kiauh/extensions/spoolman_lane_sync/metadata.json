@@ -1,9 +1,10 @@
 {
   "metadata": {
-    "index": 22,
+    "index": 5,
     "module": "spoolman_lane_sync_extension",
     "maintained_by": "Broncosis",
     "display_name": "Spoolman Lane Sync",
+    "menu": "toolchangers",
     "description": [
       "Syncs filament lane data to Spoolman.",
       "",

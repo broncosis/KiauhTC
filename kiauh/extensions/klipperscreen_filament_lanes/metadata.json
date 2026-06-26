@@ -1,9 +1,10 @@
 {
   "metadata": {
-    "index": 23,
+    "index": 6,
     "module": "klipperscreen_filament_lanes_extension",
     "maintained_by": "Broncosis",
     "display_name": "KlipperScreen Filament Lanes",
+    "menu": "toolchangers",
     "description": [
       "KlipperScreen panels for filament lane management.",
       "",
