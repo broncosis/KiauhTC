@@ -3,7 +3,7 @@
     "index": 1,
     "module": "toolchanger_kit_extension",
     "maintained_by": "Broncosis",
-    "display_name": "Toolchanger Kit",
+    "display_name": "KTC Easy (klipper-toolchanger-easy)",
     "menu": "toolchangers",
     "description": [
       "Installs klipper-toolchanger-easy:",
