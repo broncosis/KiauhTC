@@ -4,6 +4,7 @@
     "module": "toolchanger_kit_extension",
     "maintained_by": "Broncosis",
     "display_name": "Toolchanger Kit",
+    "menu": "toolchangers",
     "description": [
       "Install and manage Klipper toolchanger components:",
       "",

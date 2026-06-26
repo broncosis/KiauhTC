@@ -34,6 +34,7 @@ from core.menus.settings_menu import SettingsMenu
 from core.menus.update_menu import UpdateMenu
 from core.types.color import Color
 from core.types.component_status import ComponentStatus, StatusMap, StatusText
+from core.menus.toolchanger_menu import ToolchangerMenu
 from extensions.extensions_menu import ExtensionsMenu
 from utils.common import get_kiauh_version, trunc_string
 
@@ -69,6 +70,7 @@ class MainMenu(BaseMenu):
             "4": Option(method=self.advanced_menu),
             "5": Option(method=self.backup_menu),
             "e": Option(method=self.extension_menu),
+            "t": Option(method=self.toolchanger_menu),
             "s": Option(method=self.settings_menu),
         }
 
@@ -141,7 +143,7 @@ class MainMenu(BaseMenu):
             ║                  │          Fluidd: {self.fl_status:<{pad2}} ║
             ║ Community:       │   Client-Config: {self.cc_status:<{pad2}} ║
             ║  E) [Extensions] │                                    ║
-            ║                  │   KlipperScreen: {self.ks_status:<{pad2}} ║
+            ║ T) [Toolchangers]│   KlipperScreen: {self.ks_status:<{pad2}} ║
             ║                  │       Crowsnest: {self.cn_status:<{pad2}} ║
             ╟──────────────────┼────────────────────────────────────╢
             ║ {footer1:^25} │ {footer2:^43} ║
@@ -177,3 +179,6 @@ class MainMenu(BaseMenu):
 
     def extension_menu(self, **kwargs) -> None:
         ExtensionsMenu(previous_menu=self.__class__).run()
+
+    def toolchanger_menu(self, **kwargs) -> None:
+        ToolchangerMenu(previous_menu=self.__class__).run()

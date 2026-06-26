@@ -71,6 +71,9 @@ class ExtensionsMenu(BaseMenu):
                         )
                         continue
 
+                    if metadata.get("menu") == "toolchangers":
+                        continue
+
                     int(index)
                     module_name = metadata.get("module")
                     module_path = f"kiauh.extensions.{ext.name}.{module_name}"
