@@ -4,6 +4,7 @@
     "module": "filament_feeder_extension",
     "maintained_by": "Broncosis",
     "display_name": "Filament Feeder",
+    "menu": "toolchangers",
     "description": [
       "Klipper module for multi-lane filament feeding.",
       "",
