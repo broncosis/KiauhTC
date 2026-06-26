@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "index": 24,
+    "module": "v4l2_ui_extension",
+    "maintained_by": "nic335",
+    "display_name": "v4l2-UI (USB Camera Setup)",
+    "description": [
+      "Web UI for configuring USB cameras via v4l2.",
+      "",
+      "  ● Browse and set camera controls (brightness,",
+      "    contrast, focus, exposure, etc.)",
+      "  ● Runs as a lightweight systemd web service",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/nic335/v4l2-ui",
+    "website": "",
+    "updates": true
+  }
+}

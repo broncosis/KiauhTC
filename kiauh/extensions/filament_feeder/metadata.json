@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "index": 21,
+    "module": "filament_feeder_extension",
+    "maintained_by": "Broncosis",
+    "display_name": "Filament Feeder",
+    "description": [
+      "Klipper module for multi-lane filament feeding.",
+      "",
+      "  ● Installs Klipper Python extras",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/broncosis/Filament_feeder",
+    "website": "",
+    "updates": true
+  }
+}

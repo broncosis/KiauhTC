@@ -7,7 +7,7 @@ KIAUH (Klipper Installation And Update Helper) is a Python-based installation sc
 ## Running KIAUH
 
 ```bash
-./kiauh.sh
+./KiauhTC.sh
 ```
 
 **Important:** Must NOT run as root. The script will exit if EUID is 0.
@@ -42,7 +42,7 @@ pytest kiauh/core/simple_config_parser/tests/public_api/test_options_api.py
 
 ## Project Structure
 
-- `kiauh.sh` - Bash entry point, sets PYTHONPATH and calls main.py
+- `KiauhTC.sh` - Bash entry point, sets PYTHONPATH and calls main.py
 - `kiauh/main.py` - Python entry point
 - `kiauh/core/` - Core functionality (menus, services, settings, types)
 - `kiauh/components/` - Klipper components (klipper, moonraker, webui_client, etc.)
@@ -52,7 +52,7 @@ pytest kiauh/core/simple_config_parser/tests/public_api/test_options_api.py
 
 ## Key Quirks
 
-1. **Python version:** Requires Python 3.8+ (checked in kiauh.sh)
+1. **Python version:** Requires Python 3.8+ (checked in KiauhTC.sh)
 2. **Config files:** KIAUH uses `kiauh.cfg` in project root (not .ini format - it's parsed by simple_config_parser)
 3. **Submodule:** `kiauh/core/simple_config_parser/` is a git subtree, not a submodule
 4. **Branch check:** KIAUH only checks for updates on master branch (not develop)

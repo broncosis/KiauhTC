@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "index": 23,
+    "module": "klipperscreen_filament_lanes_extension",
+    "maintained_by": "Broncosis",
+    "display_name": "KlipperScreen Filament Lanes",
+    "description": [
+      "KlipperScreen panels for filament lane management.",
+      "",
+      "  ● Requires KlipperScreen to be installed",
+      "  ● Links panel files into KlipperScreen",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/broncosis/KlipperScreen-filament-lanes",
+    "website": "",
+    "updates": true
+  }
+}

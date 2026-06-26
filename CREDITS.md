@@ -46,3 +46,47 @@ it is cloned from upstream at install time.
 
 Installed on demand by the Toolchanger Kit extension. No source code is bundled;
 it is cloned from upstream at install time.
+
+---
+
+## Filament Feeder
+
+- **Author:** Broncosis
+- **Source:** https://github.com/broncosis/Filament_feeder
+- **License:** GNU General Public License v3
+
+Installed on demand by the Filament Feeder extension. No source code is bundled;
+it is cloned from upstream at install time.
+
+---
+
+## Spoolman Lane Sync
+
+- **Author:** Broncosis
+- **Source:** https://github.com/broncosis/spoolman-lane-sync
+- **License:** GNU General Public License v3
+
+Installed on demand by the Spoolman Lane Sync extension. No source code is bundled;
+it is cloned from upstream at install time.
+
+---
+
+## KlipperScreen Filament Lanes
+
+- **Author:** Broncosis
+- **Source:** https://github.com/broncosis/KlipperScreen-filament-lanes
+- **License:** GNU General Public License v3
+
+Installed on demand by the KlipperScreen Filament Lanes extension. No source code is bundled;
+it is cloned from upstream at install time.
+
+---
+
+## v4l2-UI
+
+- **Author:** nic335
+- **Source:** https://github.com/nic335/v4l2-ui
+- **License:** MIT
+
+Installed on demand by the v4l2-UI extension. No source code is bundled;
+it is cloned from upstream at install time.

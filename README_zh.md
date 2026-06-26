@@ -79,7 +79,7 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 最后，通过运行以下命令启动 KIAUH：
 
 ```shell
-./kiauh/kiauh.sh
+./kiauh/KiauhTC.sh
 ```
 
 * **第四步：**

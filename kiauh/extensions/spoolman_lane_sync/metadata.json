@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "index": 22,
+    "module": "spoolman_lane_sync_extension",
+    "maintained_by": "Broncosis",
+    "display_name": "Spoolman Lane Sync",
+    "description": [
+      "Syncs filament lane data to Spoolman.",
+      "",
+      "  ● Requires Spoolman to be installed",
+      "  ● Installs Klipper Python extras",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/broncosis/spoolman-lane-sync",
+    "website": "",
+    "updates": true
+  }
+}

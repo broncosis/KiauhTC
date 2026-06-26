@@ -1,21 +1,23 @@
 <p align="center">
     <img src="docs/assets/logo-large.png" alt="KIAUH Logo" height="181">
-    <h1 align="center">Klipper Installation And Update Helper</h1>
+    <h1 align="center">KiauhTC — Klipper Installation And Update Helper</h1>
+    <h3 align="center">with Toolchanger Kit support</h3>
 </p>
 
 <p align="center">
-  A handy installation script that makes installing Klipper (and more) a breeze!
+  A fork of <a href="https://github.com/dw-0/kiauh">KIAUH</a> with extra extensions
+  for multi-tool and multi-lane filament printers — toolchanger macros, filament feeders,
+  Spoolman lane sync, USB camera setup, and more.
 </p>
 
 <p align="center">
-  <a><img src="https://img.shields.io/github/license/dw-0/kiauh"></a>
-  <a><img src="https://img.shields.io/github/stars/dw-0/kiauh"></a>
-  <a><img src="https://img.shields.io/github/forks/dw-0/kiauh"></a>
-  <a><img src="https://img.shields.io/github/languages/top/dw-0/kiauh?logo=gnubash&logoColor=white"></a>
-  <a><img src="https://img.shields.io/github/v/tag/dw-0/kiauh"></a>
+  <a><img src="https://img.shields.io/github/license/broncosis/KiauhTC"></a>
+  <a><img src="https://img.shields.io/github/stars/broncosis/KiauhTC"></a>
+  <a><img src="https://img.shields.io/github/forks/broncosis/KiauhTC"></a>
+  <a><img src="https://img.shields.io/github/languages/top/broncosis/KiauhTC?logo=gnubash&logoColor=white"></a>
   <br />
-  <a><img src="https://img.shields.io/github/last-commit/dw-0/kiauh"></a>
-  <a><img src="https://img.shields.io/github/contributors/dw-0/kiauh"></a>
+  <a><img src="https://img.shields.io/github/last-commit/broncosis/KiauhTC"></a>
+  <a><img src="https://img.shields.io/github/contributors/broncosis/KiauhTC"></a>
 </p>
 
 <hr>
@@ -89,14 +91,14 @@ sudo apt-get update && sudo apt-get install git -y
   home-directory:
 
 ```shell
-cd ~ && git clone https://github.com/dw-0/kiauh.git
+cd ~ && git clone https://github.com/broncosis/KiauhTC.git kiauh
 ```
 
 * **Step 3:** \
-  Finally, start KIAUH by running the next command:
+  Finally, start KiauhTC by running the next command:
 
 ```shell
-./kiauh/kiauh.sh
+./kiauh/KiauhTC.sh
 ```
 
 * **Step 4:** \
@@ -105,6 +107,66 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
   on what you want to do. To choose an action, simply type the corresponding
   number into the "Perform action"
   prompt and confirm by hitting ENTER.
+
+<hr>
+
+<h2 align="center">🔧 KiauhTC Extensions</h2>
+
+All extensions below are found in the **Extensions** menu. They all register
+with Moonraker's `update_manager` so they can be updated from the Mainsail or
+Fluidd UI alongside Klipper.
+
+---
+
+### Toolchanger Kit
+
+Installs and manages multi-tool components for toolchanger printers.
+
+| Component | What it does |
+|-----------|-------------|
+| [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy) | Python extras + macros for tool-change sequences |
+| [Cartographer probe](https://github.com/Cartographer3D/cartographer-klipper) | Klipper plugin for Cartographer eddy-current probes |
+| [Axiscope](https://github.com/nic335/Axiscope) | Tool alignment web service + Klipper module |
+
+During installation you will be asked which probe type you are using:
+
+- **TAP** — each tool has its own Z-probe. You will also be offered the option
+  to roll Klipper back to a known-good commit, because several recent Klipper
+  updates have broken tap-based probing.
+- **Shuttle** — a single probe is mounted on the toolhead carrier.
+
+> Klipper must be installed via KIAUH before running the Toolchanger Kit installer.
+
+---
+
+### [Filament Feeder](https://github.com/broncosis/Filament_feeder)
+
+Klipper module for multi-lane filament feeding. Installs Python extras and
+symlinks them into Klipper's extras directory.
+
+---
+
+### [Spoolman Lane Sync](https://github.com/broncosis/spoolman-lane-sync)
+
+Syncs filament lane data to [Spoolman](https://github.com/Donkie/Spoolman).
+During installation, KiauhTC will check whether Spoolman is installed and
+suggest installing it first if it is not found.
+
+---
+
+### [KlipperScreen Filament Lanes](https://github.com/broncosis/KlipperScreen-filament-lanes)
+
+Adds filament lane management panels to KlipperScreen. Requires KlipperScreen
+to be installed first.
+
+---
+
+### [v4l2-UI](https://github.com/nic335/v4l2-ui)
+
+Web UI for configuring USB cameras via v4l2 — browse and adjust camera
+controls (brightness, contrast, focus, exposure, etc.) from a browser.
+Runs as a lightweight systemd service; KiauhTC will check that `v4l2-utils`
+is installed and print the access URL when setup completes.
 
 <hr>
 
@@ -223,19 +285,11 @@ changes!**
 
 <h2 align="center">✨ Credits ✨</h2>
 
-* A big thank you to [lixxbox](https://github.com/lixxbox) for that awesome
-  KIAUH-Logo!
-* Also, a big thank you to everyone who supported my work with
-  a [Ko-fi](https://ko-fi.com/dw__0) !
-* Last but not least: Thank you to all contributors and members of the Klipper
-  Community who like and share this project!
-
-<hr>
-
-<h4 align="center">A special thank you to JetBrains for sponsoring this project
-with their incredible software!</h4>
-<p align="center">
-  <a href="https://www.jetbrains.com/community/opensource/#support" target="_blank">
-    <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." height="128">
-  </a>
-</p>
+* KiauhTC is a fork of [KIAUH](https://github.com/dw-0/kiauh) by
+  [dw-0](https://github.com/dw-0) — all original credit goes to them and the
+  KIAUH contributors.
+* Thank you to [lixxbox](https://github.com/lixxbox) for the KIAUH logo.
+* Thank you to [jwellman80](https://github.com/jwellman80) for
+  klipper-toolchanger-easy, [Cartographer3D](https://github.com/Cartographer3D)
+  for the Cartographer Klipper plugin, and [nic335](https://github.com/nic335)
+  for Axiscope.

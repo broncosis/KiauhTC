@@ -43,6 +43,10 @@ AXISCOPE_REPO = "https://github.com/nic335/Axiscope.git"
 AXISCOPE_DIR = HOME / "axiscope"
 AXISCOPE_VENV = AXISCOPE_DIR / "axiscope-env"
 
+# Last Klipper commit confirmed to work with tap-based probing.
+# Several Klipper updates after this commit broke tap; pin here when needed.
+KLIPPER_KNOWN_GOOD_COMMIT = "e605fd18560fbb5a7413ca12b72325ad4e18de16"
+
 
 # ── Module-level helpers ──────────────────────────────────────────────── #
 
@@ -277,6 +281,9 @@ class ToolchangerKitExtension(BaseExtension):
         # Probe type
         probe_type = self._ask_probe_type()
 
+        if probe_type == "tap":
+            self._offer_klipper_rollback()
+
         # Config directory structure
         tc_cfg = CONFIG_DIR / "toolchanger"
         readonly_dir = tc_cfg / "readonly-configs"
@@ -345,6 +352,33 @@ class ToolchangerKitExtension(BaseExtension):
             if sel == "2":
                 return "shuttle"
             print("  Please enter 1 or 2.")
+
+    def _offer_klipper_rollback(self) -> None:
+        Logger.print_warn(
+            "\nWarning: several recent Klipper updates have broken tap-based probing."
+        )
+        Logger.print_warn(
+            f"Known-good commit: {KLIPPER_KNOWN_GOOD_COMMIT}"
+        )
+        print(
+            "\nRolling back pins Klipper to that commit (detached HEAD).\n"
+            "Moonraker will flag Klipper as 'dirty' until you re-attach to a branch.\n"
+        )
+        sel = input("Roll Klipper back to the known-good version? [y/N]: ").strip().lower()
+        if sel != "y":
+            Logger.print_info("Skipping Klipper rollback — continuing with current version.")
+            return
+
+        Logger.print_status("Pinning Klipper to known-good commit ...")
+        try:
+            _run(["git", "-C", str(KLIPPER_DIR), "checkout", KLIPPER_KNOWN_GOOD_COMMIT])
+            Logger.print_ok(f"Klipper pinned to {KLIPPER_KNOWN_GOOD_COMMIT[:12]}")
+        except subprocess.CalledProcessError:
+            Logger.print_error("Checkout failed.")
+            Logger.print_warn(
+                "If Klipper was cloned shallow, run first: "
+                "git -C ~/klipper fetch --unshallow"
+            )
 
     def _update_toolchanger_easy(self) -> None:
         Logger.print_status("\n── Updating klipper-toolchanger-easy ──")
