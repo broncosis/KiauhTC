@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "index": 26,
+    "module": "axiscope_extension",
+    "maintained_by": "nic335",
+    "display_name": "Axiscope (tool alignment)",
+    "menu": "toolchangers",
+    "description": [
+      "Tool alignment web service for toolchanger printers.",
+      "",
+      "  ● Flask web service + Klipper module",
+      "  ● Runs as a systemd service",
+      "  ● Access via http://<printer-ip>:3000",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/nic335/Axiscope",
+    "website": "",
+    "updates": true
+  }
+}

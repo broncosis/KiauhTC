@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "index": 25,
+    "module": "cartographer_extension",
+    "maintained_by": "Cartographer3D",
+    "display_name": "Cartographer Probe",
+    "menu": "toolchangers",
+    "description": [
+      "Klipper plugin for Cartographer eddy-current probes.",
+      "",
+      "  ● Installs Python extras (cartographer.py, scanner.py, idm.py)",
+      "  ● Installs Python requirements into Klipper venv",
+      "  ● Registers with Moonraker update_manager"
+    ],
+    "repo": "https://github.com/Cartographer3D/cartographer-klipper",
+    "website": "",
+    "updates": true
+  }
+}

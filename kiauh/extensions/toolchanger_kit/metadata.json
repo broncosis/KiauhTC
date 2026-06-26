@@ -6,11 +6,11 @@
     "display_name": "Toolchanger Kit",
     "menu": "toolchangers",
     "description": [
-      "Install and manage Klipper toolchanger components:",
+      "Installs klipper-toolchanger-easy:",
       "",
-      "  ● klipper-toolchanger-easy (Python extras + macros)",
-      "  ● Cartographer probe plugin (Python extras)",
-      "  ● Axiscope tool alignment (web service + Klipper module)"
+      "  ● Python extras + macros for tool-change sequences",
+      "  ● TAP or shuttle probe config",
+      "  ● Optional Klipper rollback for tap compatibility"
     ],
     "repo": "https://github.com/Broncosis/toolchanger-installer",
     "website": "",
