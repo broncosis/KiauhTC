@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "index": 20,
+    "module": "toolchanger_kit_extension",
+    "maintained_by": "Broncosis",
+    "display_name": "Toolchanger Kit",
+    "description": [
+      "Install and manage Klipper toolchanger components:",
+      "",
+      "  ● klipper-toolchanger-easy (Python extras + macros)",
+      "  ● Cartographer probe plugin (Python extras)",
+      "  ● Axiscope tool alignment (web service + Klipper module)"
+    ],
+    "repo": "https://github.com/Broncosis/toolchanger-installer",
+    "website": "",
+    "updates": true
+  }
+}

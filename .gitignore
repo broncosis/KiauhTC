@@ -12,3 +12,4 @@ __pycache__
 *.iml
 kiauh.cfg
 klipper_repos.txt
+.claude/

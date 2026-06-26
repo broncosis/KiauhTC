@@ -30,7 +30,7 @@ green="\033[92m"
 #===================================================#
 
 function update_kiauh() {
-  echo "Updating KIAUH ..."
+  echo "Updating KiauhTC ..."
 
   cd "${KIAUH_SRCDIR}"
   git reset --hard && git pull
@@ -67,13 +67,13 @@ function kiauh_update_avail() {
 function kiauh_update_dialog() {
   [[ ! $(kiauh_update_avail) == "true" ]] && return
   echo -e "/-------------------------------------------------------\\"
-  echo -e "|${green}              New KIAUH update available!              ${white}|"
+  echo -e "|${green}            New KiauhTC update available!              ${white}|"
   echo -e "|-------------------------------------------------------|"
-  echo -e "|${green}  View Changelog: https://git.io/JnmlX                 ${white}|"
+  echo -e "|${green}  https://github.com/Broncosis/KiauhTC                 ${white}|"
   echo -e "|                                                       |"
-  echo -e "|${yellow}  It is recommended to keep KIAUH up to date. Updates  ${white}|"
-  echo -e "|${yellow}  usually contain bugfixes, important changes or new   ${white}|"
-  echo -e "|${yellow}  features. Please consider updating!                  ${white}|"
+  echo -e "|${yellow}  It is recommended to keep KiauhTC up to date.        ${white}|"
+  echo -e "|${yellow}  Updates contain bugfixes and new features.           ${white}|"
+  echo -e "|${yellow}  Please consider updating!                            ${white}|"
   echo -e "\-------------------------------------------------------/"
 
   local yn
@@ -112,7 +112,7 @@ function check_if_ratos() {
     echo -e "/-------------------------------------------------------\\"
     echo -e "|        !!! RatOS 2.1 or greater detected !!!          |"
     echo -e "|                                                       |"
-    echo -e "|        KIAUH does currently not support RatOS.        |"
+    echo -e "|        KiauhTC does currently not support RatOS.      |"
     echo -e "| If you have any questions, please ask for help on the |"
     echo -e "| RatRig Community Discord: https://discord.gg/ratrig   |"
     echo -e "\-------------------------------------------------------/"

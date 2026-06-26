@@ -30,8 +30,8 @@ def clear() -> None:
 
 
 def print_header() -> None:
-    line1 = " [ KIAUH ] "
-    line2 = "Klipper Installation And Update Helper"
+    line1 = " [ KiauhTC ] "
+    line2 = "Klipper Toolchanger Installer"
     line3 = ""
     color = Color.CYAN
     count = 62 - len(str(color)) - len(str(Color.RST))
